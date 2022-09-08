@@ -33,7 +33,7 @@
             class="types-box"
             cdkDrag
             *ngFor="let type of pokemon.types">
-            {{ type }}
+            {{ type | titlecase}}
           </mat-chip>
         </mat-chip-list>
       </div>
