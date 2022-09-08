@@ -1,0 +1,7 @@
+query GetPokemonByName($name: String!) {
+  pokemon_v2_pokemon(where: {name: {_eq: $name}}) {
+    height
+    id
+    name
+  }
+}

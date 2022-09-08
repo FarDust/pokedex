@@ -1,0 +1,26 @@
+<mat-card [ngStyle]="{ 'min-width': '320px' }">
+  <mat-card-header>
+    <mat-card-title>Pokédex</mat-card-title>
+    <mat-card-subtitle class="stat-name">Search by ID or Name</mat-card-subtitle>
+    <img mat-card-sm-image src="https://i.pinimg.com/originals/4f/82/1f/4f821f0052006190626e9f6ea4b58a5a.png" alt="pokedex image"/>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput placeholder="Pokemon Name or Id" [formControl]="pokemonIdentifier">
+    </mat-form-field>
+    <div class="pokedex-entries">
+      <mat-action-list role="list" class="">
+        <button mat-list-item *ngFor="let pokemon of pokemons" (click)="setPokemon(pokemon.id)"> #{{ pokemon.id }} {{ pokemon.name }} </button>
+      </mat-action-list>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator [length]="length"
+                [pageSize]="pageSize"
+                aria-label="Select page">
+    </mat-paginator>
+  </mat-card-footer>
+</mat-card>
+
+
+

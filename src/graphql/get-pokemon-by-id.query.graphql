@@ -1,0 +1,22 @@
+query GetPokemonById($id: Int!) {
+  pokemon_v2_pokemon(where: { id: { _eq: $id } }) {
+    height
+    id
+    name
+    pokemon_v2_pokemonsprites {
+      sprites
+    }
+    pokemon_v2_pokemonstats {
+      base_stat
+      pokemon_v2_stat {
+        name
+      }
+    }
+    weight
+    pokemon_v2_pokemontypes {
+      pokemon_v2_type {
+        name
+      }
+    }
+  }
+}

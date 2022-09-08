@@ -1,0 +1,9 @@
+.pokedex-entries {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  min-height: 220px;
+}

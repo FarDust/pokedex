@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+@import '@angular/material/prebuilt-themes/purple-green.css';
+@import '~material-icons/iconfont/material-icons.css';
+
+body {
+  background-color: #303030;
+}
+
+$my-primary: mat.define-palette(mat.$purple-palette, 500);
+$my-accent: mat.define-palette(mat.$purple-palette, A200, A100, A400);
+
+$my-theme: mat.define-dark-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ )
+));
+
+@include mat.all-component-themes($my-theme);
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: center;
+}
