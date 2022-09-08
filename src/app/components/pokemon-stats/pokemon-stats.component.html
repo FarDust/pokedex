@@ -10,12 +10,12 @@
     <mat-card-content>
       <div class="flex-data">
         <div *ngIf="pokemon.sprites" class="flex-data-sprite">
-          <img src="{{ pokemon.sprites.front_default }}" alt="pokemon default front"/>
-          <img src="{{ pokemon.sprites.back_default }}" alt="pokemon default back"/>
+          <img *ngIf="pokemon.sprites.front_default" src="{{ pokemon.sprites.front_default }}" alt="pokemon default front"/>
+          <img *ngIf="pokemon.sprites.back_default" src="{{ pokemon.sprites.back_default }}" alt="pokemon default back"/>
         </div>
         <div *ngIf="pokemon.sprites" class="flex-data-sprite">
-          <img src="{{ pokemon.sprites.front_shiny }}" alt="pokemon shiny front"/>
-          <img src="{{ pokemon.sprites.back_shiny }}" alt="pokemon shiny front"/>
+          <img *ngIf="pokemon.sprites.front_shiny" src="{{ pokemon.sprites.front_shiny }}" alt="pokemon shiny front"/>
+          <img *ngIf="pokemon.sprites.back_shiny" src="{{ pokemon.sprites.back_shiny }}" alt="pokemon shiny front"/>
         </div>
         <div class="flex-data-item">
           <div class="stat-name"><span class="stat-name">Height:</span> {{ pokemon.height }}</div>
