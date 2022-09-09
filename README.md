@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Pokemon Finder (by name or id)
 - Pokemon Information (name, id, types, abilities, stats, sprites)
-## Dvelopment Commands
+## Development Commands
 
 ### Development server
 
